@@ -1,6 +1,6 @@
 /* Snake Game using C++
 developed by AMU 2015 BATCH SOFTWARE ENGINEERING STUDENTS
-  APPROVED BY:-Miss Yitayish
+  APPROVED BY:-Miss Yitayish Lema
 November 2024 */
 
 
