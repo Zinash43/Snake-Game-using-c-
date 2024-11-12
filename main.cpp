@@ -45,6 +45,10 @@ void GameInit()
 }
 
 // Function for creating the game board & rendering
+
+
+
+
 // Main function / game looping function
 int main()
 {
