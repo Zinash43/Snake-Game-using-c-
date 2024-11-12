@@ -45,28 +45,23 @@ void GameInit()
 }
 
 // Function for creating the game board & rendering
-
-// Function to set the game difficulty level
-int SetDifficulty()
+// Main function / game looping function
+int main()
 {
-    int dfc, choice;
-    cout << "\nSET DIFFICULTY\n1: Easy\n2: Medium\n3: hard "
-            "\nNOTE: if not chosen or pressed any other "
-            "key, the difficulty will be automatically set "
-            "to medium\nChoose difficulty level: ";
-    cin >> choice;
-    switch (choice) {
-    case '1':
-        dfc = 50;
-        break;
-    case '2':
-        dfc = 100;
-        break;
-    case '3':
-        dfc = 150;
-        break;
-    default:
-        dfc = 100;
+    string playerName;
+    cout << "enter your name: ";
+    cin >> playerName;
+    int dfc = SetDifficulty();
+
+    GameInit();
+    while (!isGameOver) {
+        GameRender(playerName);
+        UserInput();
+        UpdateGame();
+        // creating a delay for according to the chosen
+        // difficulty
+        Sleep(dfc);
     }
-    return dfc;
+
+    return 0;
 }
